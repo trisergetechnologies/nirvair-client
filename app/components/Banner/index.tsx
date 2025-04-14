@@ -16,7 +16,7 @@ const Banner = () => {
                         <h3 className='text-black opacity-75 text-lg font-normal text-center lg:text-start pt-8'>Nirvair entwickelt zukunftssichere digitale Lösungen mit Präzision, Qualität und modernster Technologie - deutsche Ingenieurexzellenz für Ihre digitale Transformation.</h3>
                         <div className='pt-8 mx-auto lg:mx-0'>
                             <button className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-electricblue hover:text-white hover:bg-blue">
-                                Get started
+                            Jetzt starten
                             </button>
                         </div>
                     </div>
