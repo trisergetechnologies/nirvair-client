@@ -9,11 +9,22 @@ import Pricing from './components/Pricing/index';
 export default function Home() {
   return (
     <main>
+      {/* Hero Section */}
       <Banner />
+
+      {/* About Us */}
       <People />
+
+      {/* Services */}
       <Features />
+
+      {/* Why Choose Us */}
       <Business />
+
+      {/* Our Vision */}
       <Payment />
+
+      {/* Testimonials */}
       <Pricing />
     </main>
   )
