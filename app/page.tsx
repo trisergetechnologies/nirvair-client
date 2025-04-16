@@ -3,7 +3,6 @@ import Business from './components/Business/index';
 import Features from './components/Features/index';
 import Payment from './components/Payment/index';
 import People from './components/People/index';
-import Pricing from './components/Pricing/index';
 
 
 export default function Home() {
@@ -24,8 +23,7 @@ export default function Home() {
       {/* Our Vision */}
       <Payment />
 
-      {/* Testimonials */}
-      <Pricing />
+      {/* <Pricing /> */}
     </main>
   )
 }

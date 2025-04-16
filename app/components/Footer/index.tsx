@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 interface links {
@@ -45,7 +44,7 @@ const links: links[] = [
 
 
 
-const footer = () => {
+const Footer = () => {
     return (
 
         <div className=" bg-midnightblue">
@@ -55,13 +54,13 @@ const footer = () => {
 
                     {/* COLUMN-1 */}
 
-                    <div className='sm:col-span-6 lg:col-span-3'>
+                    {/* <div className='sm:col-span-6 lg:col-span-3'>
                         <div className="flex flex-shrink-0 items-center border-right">
                             <Image src="/assets/footer/logo.svg" alt="logo" width={214} height={66} />
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className='sm:col-span-6 lg:col-span-5 flex items-center'>
+                    {/* <div className='sm:col-span-6 lg:col-span-5 flex items-center'>
                         <div className='flex gap-4'>
                             {links.map((items, i) => (
                                 <div key={i}>
@@ -72,9 +71,9 @@ const footer = () => {
                             ))}
 
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className='sm:col-span-6 lg:col-span-4'>
+                    {/* <div className='sm:col-span-6 lg:col-span-4'>
                         <div className='flex gap-4 lg:justify-end'>
                             {socialLinks.map((items, i) => (
                                 <Link href={items.link} key={i}>
@@ -85,7 +84,7 @@ const footer = () => {
                             ))}
 
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 
@@ -105,4 +104,4 @@ const footer = () => {
     )
 }
 
-export default footer;
+export default Footer;
