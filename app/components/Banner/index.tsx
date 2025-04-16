@@ -21,9 +21,9 @@ const Banner = () => {
                         </div>
                     </div>
 
-                    <div className='col-span-5 flex justify-center xl:-mb-32 xl:-mr-32 pt-10 lg:pt-0'>
+                    {/* <div className='col-span-5 flex justify-center xl:-mb-32 xl:-mr-32 pt-10 lg:pt-0'>
                         <Image src="/assets/banner/banner.png" alt="nothing" width={1000} height={805} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

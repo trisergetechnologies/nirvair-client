@@ -13,10 +13,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'Produkt', href: '#product', current: true },
-    { name: 'Preise', href: '#pricing', current: false },
-    { name: 'Funktionen', href: '#features', current: false },
-    { name: 'Über uns', href: '#AboutUs', current: false },
+    { name: 'Über uns', href: '#product', current: true },
+    { name: 'Dienstleistungen', href: '#features', current: false },
+    { name: 'Kontakt', href: '#', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -37,6 +36,13 @@ const Navbar = () => {
                             {/* LOGO */}
 
                             <div className="flex flex-shrink-0 items-center">
+
+                            <h1 className='text-2xl/7 font-bold text-gray-900 sm:truncate sm:text-4xl sm:tracking-tight'>
+                                  <Link href="#" className="hover:text-gray-700 transition-colors">
+                                    nirvair
+                                  </Link>
+                            </h1>
+                                {/* 
                                 <img
                                     className="block h-12 w-40 lg:hidden"
                                     src={'/assets/logo/logo.svg'}
@@ -47,6 +53,7 @@ const Navbar = () => {
                                     src={'/assets/logo/logo.svg'}
                                     alt="paidin-logo"
                                 />
+                                 */}
                             </div>
 
                             {/* LINKS */}

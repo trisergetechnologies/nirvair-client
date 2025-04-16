@@ -12,37 +12,37 @@ const Aboutdata: datatype[] = [
     imgSrc: "/assets/features/time.svg",
     heading: "Software Product",
     paragraph:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa",
+      "Bereitstellung und Umsetzung von End-to-End-Entwicklungslösungen, die Unternehmen mit innovativen, skalierbaren und hochwertigen digitalen Produkten stärken.",
   },
   {
     imgSrc: "/assets/features/signal.svg",
     heading: "Digital Marketing",
     paragraph:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa",
+      "Umfassende Digitalmarketing-Dienstleistungen zur Steigerung von Markenbekanntheit, Engagement und Wachstum durch SEO, Social Media, Inhalte, Analysen und performancebasierte Strategien.",
   },
   {
     imgSrc: "/assets/features/dollar.svg",
     heading: "Cloud Solutions",
     paragraph:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa",
+      "Robust cloud product services offering scalable infrastructure, secure storage, seamless integration, and enhanced performance to drive business efficiency and innovation.",
   },
   {
     imgSrc: "/assets/features/dollar.svg",
     heading: "Data Driven Solutions",
     paragraph:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa",
+      "Datengetriebene Lösungen, die Unternehmen mit umsetzbaren Erkenntnissen, fortschrittlicher Analytik, KI-Integration und intelligenter Entscheidungsfindung für optimiertes Wachstum und Leistung stärken.",
   },
   {
     imgSrc: "/assets/features/dollar.svg",
     heading: "AI|ML Solutions",
     paragraph:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa",
+      "AI/ML-Lösungsdienste bieten intelligente Automatisierung, prädiktive Analytik und individuelle Modellentwicklung zur Förderung von Innovation, Effizienz und smarteren Geschäftsentscheidungen.",
   },
   {
     imgSrc: "/assets/features/dollar.svg",
     heading: "Support & Security",
     paragraph:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa",
+      "Umfassende Sicherheits- und Support-Dienste, die Datenschutz, Systemzuverlässigkeit, kontinuierliche Überwachung und fachkundige Unterstützung für reibungslose und sichere Geschäftsabläufe gewährleisten.",
   },
 ];
 
@@ -77,13 +77,14 @@ const Features = () => {
                 href={"/"}
                 className="text-electricblue text-xl font-medium flex gap-2 pt-10 pb-2"
               >
-                Learn more{" "}
+                { /*Learn more{" "} 
                 <Image
                   src="/assets/people/arrow-right.svg"
                   alt="arrow-right"
                   width={24}
                   height={24}
                 />
+                 */}
               </Link>
             </div>
           ))}

@@ -1,110 +1,74 @@
-"use client"
-import { useState } from 'react';
-
-const PrivacyPolicy = () => {
-  const [isGerman, setIsGerman] = useState(true);
-
-  const toggleLanguage = () => {
-    setIsGerman((prev) => !prev);
-  };
-
+export default function Datenschutzerklärung() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-20 text-black">
-      {/* Translate Button */}
-      <div className="flex justify-end mb-8">
-        <button
-          onClick={toggleLanguage}
-          className="bg-electricblue text-white px-4 py-2 rounded-md text-sm font-medium shadow hover:bg-blue-600 transition"
-        >
-          {isGerman ? 'English anzeigen' : 'Deutsch anzeigen'}
-        </button>
-      </div>
-
-      <h1 className="text-3xl font-bold mb-6">
-        {isGerman ? 'Datenschutzerklärung' : 'Privacy Policy'}
+    <div className="max-w-3xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-gray-800 border-b border-gray-200 pb-4">
+        Datenschutzerklärung
       </h1>
+      <p className="italic text-gray-500 mt-2">Gültig ab April 2025</p>
 
-      <p className="mb-6 opacity-75">
-        {isGerman ? 'Gültig ab: [Datum einfügen]' : 'Effective Date: [Insert Date]'}
-      </p>
+      <div className="mt-8 space-y-6">
+        <section>
+          <h2 className="text-xl font-semibold text-gray-700">1. Erhobene Daten</h2>
+          <p className="mt-2 text-gray-600">
+            Wir können folgende grundlegende Informationen erfassen, wenn Sie unsere Website besuchen:
+          </p>
+          <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+            <li>Technische Daten (IP-Adresse, Browsertyp, Geräteinformationen)</li>
+            <li>Nutzungsdaten (besuchte Seiten, Verweildauer)</li>
+            <li>Kontaktinformationen, die Sie freiwillig angeben</li>
+          </ul>
+        </section>
 
-      {/** SECTION 1 **/}
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">
-          {isGerman ? '1. Verantwortliche Stelle' : '1. Data Controller'}
-        </h2>
-        <p className="opacity-75">
-          {isGerman ? (
-            <>
-              Die verantwortliche Stelle im Sinne des Datenschutzrechts ist:
-              <br />[Ihr Firmenname]<br />[Firmenadresse]<br />[Stadt, Postleitzahl]<br />[E-Mail-Adresse]<br />[Telefonnummer]
-            </>
-          ) : (
-            <>
-              The data controller for the purposes of data protection law is:
-              <br />[Your Company Name]<br />[Company Address]<br />[City, Postal Code]<br />[Email Address]<br />[Phone Number]
-            </>
-          )}
-        </p>
-      </section>
+        <section>
+          <h2 className="text-xl font-semibold text-gray-700">2. Verwendung der Daten</h2>
+          <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+            <li>Verbesserung und Wartung unserer Website</li>
+            <li>Beantwortung von Anfragen und Supportleistungen</li>
+            <li>Analyse der Websitenutzung zur Optimierung</li>
+          </ul>
+        </section>
 
-      {/** SECTION 2 **/}
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">
-          {isGerman ? '2. Erhebung personenbezogener Daten' : '2. Collection of Personal Data'}
-        </h2>
-        <ul className="list-disc list-inside opacity-75">
-          {isGerman ? (
-            <>
-              <li><strong>Technische Daten:</strong> IP-Adressen, Browsertyp, Betriebssystem usw.</li>
-              <li><strong>Kontaktdaten:</strong> Name, E-Mail-Adresse und Informationen, die Sie uns senden.</li>
-              <li><strong>Nutzungsdaten:</strong> Informationen zur Nutzung der Website.</li>
-            </>
-          ) : (
-            <>
-              <li><strong>Technical Data:</strong> IP addresses, browser type, operating system, etc.</li>
-              <li><strong>Contact Data:</strong> Name, email address, and message contents.</li>
-              <li><strong>Usage Data:</strong> Information about how the website is used.</li>
-            </>
-          )}
-        </ul>
-      </section>
+        <section>
+          <h2 className="text-xl font-semibold text-gray-700">3. Weitergabe von Daten</h2>
+          <p className="mt-2 text-gray-600">
+            Wir verkaufen oder teilen Ihre persönlichen Daten nicht mit Dritten, außer:
+          </p>
+          <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+            <li>Wenn gesetzlich vorgeschrieben</li>
+            <li>An Dienstleister, die uns beim Betrieb der Website unterstützen</li>
+          </ul>
+        </section>
 
-      {/** SECTION 3 - 12 **/}
-      {[...Array(10)].map((_, i) => (
-        <section className="mb-8" key={i}>
-          <h2 className="text-xl font-semibold mb-2">
-            {isGerman ? `Abschnitt ${i + 3}` : `Section ${i + 3}`}
-          </h2>
-          <p className="opacity-75">
-            {isGerman
-              ? 'Deutscher Beispieltext für Abschnitt ' + (i + 3) + '.'
-              : 'English sample text for section ' + (i + 3) + '.'}
+        <section>
+          <h2 className="text-xl font-semibold text-gray-700">4. Cookies</h2>
+          <p className="mt-2 text-gray-600">
+            Wir verwenden essentielle Cookies für die Website-Funktionalität. Sie können Cookies in Ihren Browser-Einstellungen deaktivieren.
           </p>
         </section>
-      ))}
 
-      {/** CONTACT SECTION AGAIN (Section 12) **/}
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">
-          {isGerman ? '12. Kontakt' : '12. Contact Us'}
-        </h2>
-        <p className="opacity-75">
-          {isGerman ? (
-            <>
-              Wenn Sie Fragen oder Bedenken zu dieser Datenschutzerklärung oder der Verarbeitung Ihrer personenbezogenen Daten haben, kontaktieren Sie uns bitte unter:<br />
-              [Ihr Firmenname]<br />[Firmenadresse]<br />[E-Mail-Adresse]<br />[Telefonnummer]
-            </>
-          ) : (
-            <>
-              If you have any questions or concerns regarding this Privacy Policy or how we handle your personal data, please contact us at:<br />
-              [Your Company Name]<br />[Company Address]<br />[Email Address]<br />[Phone Number]
-            </>
-          )}
-        </p>
-      </section>
+        <section>
+          <h2 className="text-xl font-semibold text-gray-700">5. Ihre Rechte</h2>
+          <p className="mt-2 text-gray-600">
+            Sie können Auskunft über oder Löschung Ihrer persönlichen Daten verlangen, indem Sie uns kontaktieren.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-gray-700">6. Kontakt</h2>
+          <p className="mt-2 text-gray-600">
+            Bei Fragen zum Datenschutz kontaktieren Sie uns unter:<br />
+            <span className="font-medium">Nirvair</span><br />
+            Email: nirvairofficial@gmail.com
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-gray-700">7. Änderungen dieser Richtlinie</h2>
+          <p className="mt-2 text-gray-600">
+            Wir können diese Richtlinie gelegentlich aktualisieren. Die aktualisierte Version wird hier veröffentlicht.
+          </p>
+        </section>
+      </div>
     </div>
   );
-};
-
-export default PrivacyPolicy;
+}

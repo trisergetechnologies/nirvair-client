@@ -7,9 +7,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Product', href: '#product', current: true },
-  { name: 'Pricing', href: '#pricing', current: false },
-  { name: 'Features', href: '#features', current: false },
+  { name: 'Über uns', href: '#product', current: true },
+    { name: 'Dienstleistungen', href: '#features', current: false },
+    { name: 'Kontakt', href: '#', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -35,13 +35,14 @@ const Data = () => {
                 {item.name}
               </Link>
             ))}
+
             <div className="mt-4"></div>
-            <button className="bg-white w-full text-midnightblue border border-midnightblue font-medium py-2 px-4 rounded">
+            {/* <button className="bg-white w-full text-midnightblue border border-midnightblue font-medium py-2 px-4 rounded">
               Log In
             </button>
             <button className="bg-midnightblue w-full hover:bg-blue hover:text-white text-white font-medium my-2 py-2 px-4 rounded">
               Sign up
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
