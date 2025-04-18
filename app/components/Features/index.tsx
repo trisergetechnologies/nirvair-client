@@ -27,13 +27,13 @@ const Aboutdata: datatype[] = [
       "Robust cloud product services offering scalable infrastructure, secure storage, seamless integration, and enhanced performance to drive business efficiency and innovation.",
   },
   {
-    imgSrc: "/assets/features/dollar.svg",
+    imgSrc: "/assets/features/time.svg",
     heading: "Data Driven Solutions",
     paragraph:
       "Datengetriebene Lösungen, die Unternehmen mit umsetzbaren Erkenntnissen, fortschrittlicher Analytik, KI-Integration und intelligenter Entscheidungsfindung für optimiertes Wachstum und Leistung stärken.",
   },
   {
-    imgSrc: "/assets/features/dollar.svg",
+    imgSrc: "/assets/features/signal.svg",
     heading: "AI|ML Solutions",
     paragraph:
       "AI/ML-Lösungsdienste bieten intelligente Automatisierung, prädiktive Analytik und individuelle Modellentwicklung zur Förderung von Innovation, Effizienz und smarteren Geschäftsentscheidungen.",
