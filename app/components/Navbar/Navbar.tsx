@@ -13,9 +13,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'Über uns', href: '#product', current: true },
+    { name: 'Über uns', href: '/about-us', current: true },
     { name: 'Dienstleistungen', href: '#features', current: false },
-    { name: 'Kontakt', href: '#', current: false },
+    { name: 'Kontakt', href: '#contactSection', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -38,7 +38,7 @@ const Navbar = () => {
                             <div className="flex flex-shrink-0 items-center">
 
                             <h1 className='text-2xl/7 font-bold text-gray-900 sm:truncate sm:text-4xl sm:tracking-tight'>
-                                  <Link href="#" className="hover:text-gray-700 transition-colors">
+                                  <Link href="/" className="hover:text-gray-700 transition-colors">
                                     nirvair
                                   </Link>
                             </h1>

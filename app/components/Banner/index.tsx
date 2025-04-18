@@ -2,6 +2,16 @@ import Image from 'next/image';
 
 const Banner = () => {
 
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contactSection');
+        if (contactSection) {
+          contactSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start' // Aligns to top of viewport
+          });
+        }
+      };
+
     return (
         <div className='bg-header'>
             <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
@@ -15,9 +25,9 @@ const Banner = () => {
                         <h1 className='text-midnightblue text-2xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5'>Wertegeleitet, technologiebasiert, wirkungsorientiert.</h1>
                         <h3 className='text-black opacity-75 text-lg font-normal text-center lg:text-start pt-8'>Nirvair entwickelt zukunftssichere digitale Lösungen mit Präzision, Qualität und modernster Technologie - deutsche Ingenieurexzellenz für Ihre digitale Transformation.</h3>
                         <div className='pt-8 mx-auto lg:mx-0'>
-                            <button className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-electricblue hover:text-white hover:bg-blue">
-                            Jetzt starten
-                            </button>
+                            <a href='#contactSection'><button className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-electricblue hover:text-white hover:bg-blue">
+                            Kontakt
+                            </button></a>
                         </div>
                     </div>
 

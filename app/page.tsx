@@ -24,6 +24,7 @@ export default function Home() {
       <Payment />
 
       {/* <Pricing /> */}
+      
     </main>
   )
 }

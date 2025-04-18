@@ -21,7 +21,7 @@ const Payment = () => {
                         {/* Your goals are at the heart of what we do. With tailored technology solutions and expert consulting, we help turn your vision into reality. Through innovative approaches, modern tools, and a collaborative partnership, we create sustainable success – together with you. */}
                         Bei uns stehen Ihre Ziele im Mittelpunkt. Mit maßgeschneiderten Technologielösungen und fundierter Beratung unterstützen wir Sie dabei, Ihre Visionen in die Realität umzusetzen. Durch innovative Ansätze, moderne Tools und partnerschaftliche Zusammenarbeit schaffen wir nachhaltigen Erfolg – gemeinsam mit Ihnen.
                         </h3>
-                        <Link href={'/'} className="text-electricblue text-lg font-medium flex gap-2 pt-4 mx-auto lg:mx-0">
+                        <Link href={'/about-us'} className="text-electricblue text-lg font-medium flex gap-2 pt-4 mx-auto lg:mx-0">
                         {/* Learn More */}
                         Mehr erfahren
                          <Image src="/assets/people/arrow-right.svg" alt="arrow-right" width={24} height={24} />
