@@ -7,9 +7,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Über uns', href: '#product', current: true },
+  { name: 'Über uns', href: '/about-us', current: true },
     { name: 'Dienstleistungen', href: '#features', current: false },
-    { name: 'Kontakt', href: '#', current: false },
+    { name: 'Kontakt', href: '#contactSection', current: false },
 ]
 
 function classNames(...classes: string[]) {

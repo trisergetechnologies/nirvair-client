@@ -189,15 +189,15 @@ export default function AboutUs() {
         </section> */}
 
         {/* CTA Section */}
-        <section className="py-16 px-6 bg-blue-600 text-white">
+        <section className="py-16 px-6 bg-blue-600 text-black">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to experience the Nirvair difference?</h2>
+            <h2 className="text-3xl font-bold mb-6">Bereit, den Nirvair-Unterschied kennenzulernen?</h2>
             <p className="text-xl mb-8">
-              Join hundreds of satisfied clients who trust us for innovative solutions.
+            Schließen Sie sich Hunderten zufriedener Kunden an, die uns für innovative Lösungen vertrauen.
             </p>
-            <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition-colors duration-300">
-              Get in Touch
-            </button>
+            <a href='#contactSection'><button  className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition-colors duration-300">
+            Kontaktieren Sie uns
+            </button></a>
           </div>
         </section>
       </div>

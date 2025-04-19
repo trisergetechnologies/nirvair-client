@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
               55268 Nieder-Olm<br />
               Deutschland<br />
               <a href="mailto:nirvairgermany@gmail.com" className="text-blue-600 hover:underline">
-                nirvairgermany@gmail.com
+                info@nirvair.de
               </a>
             </p>
           </section>
