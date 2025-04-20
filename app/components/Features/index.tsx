@@ -24,7 +24,7 @@ const Aboutdata: datatype[] = [
     imgSrc: "/assets/features/dollar.svg",
     heading: "Cloud Solutions",
     paragraph:
-      "Robust cloud product services offering scalable infrastructure, secure storage, seamless integration, and enhanced performance to drive business efficiency and innovation.",
+      "Robuste Cloud-Produktdienste mit skalierbarer Infrastruktur, sicherer Speicherung, nahtloser Integration und verbesserter Leistung zur Steigerung der Geschäftseffizienz und Förderung von Innovation.",
   },
   {
     imgSrc: "/assets/features/time.svg",
