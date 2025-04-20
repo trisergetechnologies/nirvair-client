@@ -67,7 +67,7 @@ export default function AboutUs() {
                   <h3 className="text-2xl font-bold text-white">Mission</h3>
                 </div>
                 <p className="text-white">
-                  To empower businesses and individuals through innovative technology solutions that simplify complexities, enhance productivity, and drive sustainable growth.
+                Unternehmen und Einzelpersonen durch innovative Technologielösungen zu befähigen, Komplexität zu vereinfachen, die Produktivität zu steigern und nachhaltiges Wachstum voranzutreiben.
                 </p>
               </div>
               
@@ -81,7 +81,7 @@ export default function AboutUs() {
                   <h3 className="text-2xl font-bold text-white">Vision</h3>
                 </div>
                 <p className="text-white">
-                  To be a global leader in our domain, recognized for our commitment to excellence, innovation, and creating meaningful impact in the lives of our customers and communities.
+                Eine globale Führungsrolle in unserem Bereich einzunehmen, anerkannt für unser Engagement für Exzellenz, Innovation und die Schaffung eines bedeutungsvollen Einflusses auf das Leben unserer Kunden und Gemeinschaften.
                 </p>
               </div>
             </div>
