@@ -1,6 +1,6 @@
 "use client";
-import { SetStateAction, useState } from 'react';
 import Image from 'next/image';
+import { SetStateAction, useState } from 'react';
 
 const names = [
     {
