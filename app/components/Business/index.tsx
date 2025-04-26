@@ -1,39 +1,96 @@
-import Image from 'next/image';
+'use client';
+import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
 
 const Business = () => {
-
-    // In your Banner component
-const scrollToContact = () => {
+  const scrollToContact = () => {
     const contactSection = document.getElementById('contactSection');
     if (contactSection) {
       contactSection.scrollIntoView({ 
         behavior: 'smooth',
-        block: 'start' // Aligns to top of viewport
+        block: 'start'
       });
     }
   };
 
-    return (
-        <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
+  const slideInVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 }
+  };
 
-            <div className='grid grid-cols-1 lg:grid-cols-12 space-x-1'>
+  const floatImage = {
+    float: {
+      y: [-15, 15, -15],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
 
-                <div className='col-span-6 flex flex-col justify-center'>
-                    <h2 className='text-midnightblue text-4xl sm:text-5xl font-semibold text-center lg:text-start lh-143'>Warum wir die richtige Wahl für Sie sind</h2>
-                    <h3 className='text-black text-lg font-normal text-center lg:text-start lh-173 opacity-75 pt-3'>Im Mittelpunkt unseres Handelns stehen Qualität, Sorgfalt und Vertrauen. Wir verstehen Ihre Bedürfnisse und geben alles, um Lösungen zu bieten, die wirklich etwas bewirken. Mit einem engagierten Team, nachgewiesener Erfolgsbilanz und kundenorientiertem Ansatz sind wir die richtige Wahl für Sie.</h3>
-                    {/* <Link href={'/'} className="text-electricblue text-lg font-medium flex gap-2 pt-4 mx-auto lg:mx-0">
-                    Mehr erfahren <Image src="/assets/people/arrow-right.svg" alt="arrow-right" width={24} height={24} />
-                    </Link> */}
-                </div>
+  return (
+    <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
+      <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
 
-                <div className='col-span-6 flex justify-center mt-10 lg:mt-0'>
-                    <Image src="/assets/business/nirvair01.png" alt="business" width={1000} height={805} />
-                </div>
+        {/* Text Content */}
+        <motion.div 
+          className='col-span-6 flex flex-col justify-center'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.2 } }
+          }}
+        >
+          <motion.h2 
+            variants={slideInVariants}
+            transition={{ duration: 0.6 }}
+            className='text-midnightblue text-4xl sm:text-5xl font-semibold text-center lg:text-start lh-143'
+          >
+            Warum wir die richtige Wahl für Sie sind
+          </motion.h2>
+          
+          <motion.h3
+            variants={slideInVariants}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className='text-black text-lg font-normal text-center lg:text-start lh-173 opacity-75 pt-3'
+          >
+            Im Mittelpunkt unseres Handelns stehen Qualität, Sorgfalt und Vertrauen...
+          </motion.h3>
 
-            </div>
-        </div>
+          <motion.button
+            onClick={scrollToContact}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-6 mx-auto lg:mx-0 flex flex-col items-center group"
+          >
+            <span className="text-electricblue text-lg font-medium mb-2">
+              Jetzt kontaktieren
+            </span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            >
+              <ArrowDownCircleIcon className="h-8 w-8 text-electricblue group-hover:text-blue-600 transition-colors" />
+            </motion.div>
+          </motion.button>
+        </motion.div>
 
-    )
+        {/* Image Section */}
+        <motion.div 
+          className='col-span-6 flex justify-center mt-10 lg:mt-0'
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+        <iframe src="https://lottie.host/embed/4d88f81c-2f3b-448e-8c60-5f83a0dc2d97/C8UlgJ6U11.lottie"></iframe>
+        </motion.div>
+
+      </div>
+    </div>
+  )
 }
 
 export default Business;
