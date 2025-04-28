@@ -1,6 +1,7 @@
 'use client';
 import { BeakerIcon, ChartBarIcon, CloudArrowUpIcon, CommandLineIcon, CpuChipIcon, LockClosedIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 interface datatype {
   icon: React.ReactNode;
@@ -42,26 +43,44 @@ const Aboutdata: datatype[] = [
 ];
 
 const Features = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Responsive animation variants
   const slideInVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: isMobile ? 0 : 0.5, y: isMobile ? 0 : 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: isMobile ? 0.3 : 0.6,
+        ease: "easeOut"
+      }
+    }
   };
 
   const staggerContainer = {
     visible: {
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
+        staggerChildren: isMobile ? 0.05 : 0.1,
+        delayChildren: isMobile ? 0 : 0.2
       }
     }
   };
 
   const floatAnimation = {
     float: {
-      y: [-10, 10, -10],
+      y: isMobile ? [0, 5] : [-8, 8],
       transition: {
-        duration: 4,
+        duration: isMobile ? 3 : 4,
         repeat: Infinity,
+        repeatType: "mirror",
         ease: "easeInOut"
       }
     }
@@ -71,54 +90,56 @@ const Features = () => {
     <div className="bg-babyblue" id="features">
       <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <motion.h3
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ margin: "0px 0px -20% 0px" }}
           className="text-4xl sm:text-5xl font-semibold text-black text-center my-10"
         >
           Unsere Leistungen und Kompetenzen
         </motion.h3>
 
-        <motion.h5
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ margin: "0px 0px -20% 0px" }}
           className="text-black opacity-60 text-lg font-normal text-center"
         >
           Bei Nirvair sind wir auf die Entwicklung wirkungsvoller digitaler Produkte...
-        </motion.h5>
+        </motion.p>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-10"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ margin: "0px 0px -20% 0px", amount: 0.1 }}
         >
           {Aboutdata.map((item, i) => (
             <motion.div
               key={i}
               variants={slideInVariants}
-              className="bg-white rounded-2xl p-5 featureShadow hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
-              whileHover={{ y: -10 }}
+              className="bg-white rounded-2xl p-5 featureShadow hover:shadow-xl transition-shadow duration-300 group"
+              whileHover={!isMobile ? { y: -8 } : {}}
             >
               <motion.div
                 className="mb-2"
-                variants={floatAnimation}
                 animate="float"
+                variants={floatAnimation}
               >
                 {item.icon}
               </motion.div>
               
-              <h3 className="text-2xl font-semibold text-black mt-5">
+              <h3 className="text-2xl font-semibold text-black mt-4">
                 {item.heading}
               </h3>
               
-              <h4 className="text-lg font-normal text-black opacity-50 my-2">
+              <p className="text-lg font-normal text-black opacity-50 mt-2">
                 {item.paragraph}
-              </h4>
+              </p>
 
-              <div className="absolute inset-0 bg-gradient-to-b from-electricblue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {!isMobile && (
+                <div className="absolute inset-0 bg-gradient-to-b from-electricblue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              )}
             </motion.div>
           ))}
         </motion.div>

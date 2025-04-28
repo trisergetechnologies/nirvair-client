@@ -1,8 +1,18 @@
 'use client';
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const Business = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contactSection');
     if (contactSection) {
@@ -13,16 +23,39 @@ const Business = () => {
     }
   };
 
+  // Responsive animation variants
   const slideInVariants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 }
+    hidden: { 
+      opacity: isMobile ? 0 : 0.5, 
+      x: isMobile ? -20 : -100 
+    },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { 
+        duration: isMobile ? 0.4 : 0.6,
+        ease: "easeOut"
+      }
+    }
   };
 
-  const floatImage = {
+  const floatAnimation = {
     float: {
-      y: [-15, 15, -15],
+      y: isMobile ? [0, 8] : [-12, 12],
       transition: {
-        duration: 4,
+        duration: isMobile ? 4 : 5,
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const arrowBounce = {
+    bounce: {
+      y: isMobile ? [0, 6] : [0, 10, 0],
+      transition: {
+        duration: isMobile ? 1.2 : 1.5,
         repeat: Infinity,
         ease: "easeInOut"
       }
@@ -31,37 +64,33 @@ const Business = () => {
 
   return (
     <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
+      <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12'>
 
         {/* Text Content */}
         <motion.div 
           className='col-span-6 flex flex-col justify-center'
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            visible: { transition: { staggerChildren: 0.2 } }
-          }}
+          viewport={{ margin: "0px 0px -20% 0px" }}
         >
           <motion.h2 
             variants={slideInVariants}
-            transition={{ duration: 0.6 }}
-            className='text-midnightblue text-4xl sm:text-5xl font-bold text-center lg:text-start lh-143'
+            className='text-midnightblue text-3xl sm:text-4xl xl:text-5xl font-bold text-center lg:text-start leading-tight'
           >
             Warum wir die richtige Wahl für Sie sind
           </motion.h2>
           
-          <motion.h3
+          <motion.p
             variants={slideInVariants}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className='text-black text-lg font-normal text-center lg:text-start lh-173 opacity-75 pt-3'
+            className='text-black text-base md:text-lg font-normal text-center lg:text-start opacity-75 mt-4 md:mt-6 leading-relaxed'
+            transition={{ delay: 0.1 }}
           >
-            Uns zu wählen bedeutet, mit einem Team zusammenzuarbeiten, das Ihre technologischen Herausforderungen in Chancen verwandelt. Wir liefern präzise entwickelte Lösungen, unübertroffenen Support und messbare Ergebnisse – denn Ihr Erfolg ist unser höchster Maßstab.
-          </motion.h3>
+            Uns zu wählen bedeutet, mit einem Team zusammenzuarbeiten, das Ihre technologischen Herausforderungen in Chancen verwandelt.
+          </motion.p>
 
           <motion.button
             onClick={scrollToContact}
-            whileHover={{ scale: 1.05 }}
+            whileHover={!isMobile ? { scale: 1.05 } : {}}
             whileTap={{ scale: 0.95 }}
             className="mt-6 mx-auto lg:mx-0 flex flex-col items-center group"
           >
@@ -69,23 +98,32 @@ const Business = () => {
               Jetzt kontaktieren
             </span>
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
+              animate="bounce"
+              variants={arrowBounce}
             >
-              <ArrowDownCircleIcon className="h-8 w-8 text-electricblue group-hover:text-blue-600 transition-colors" />
+              <ArrowDownCircleIcon className="h-8 w-8 text-electricblue md:group-hover:text-blue-600 transition-colors" />
             </motion.div>
           </motion.button>
         </motion.div>
 
-        {/* Image Section */}
+        {/* Animation Section */}
         <motion.div 
           className='col-span-6 flex justify-center mt-10 lg:mt-0'
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: isMobile ? 30 : 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ margin: "0px 0px -20% 0px" }}
           transition={{ duration: 0.6 }}
         >
-        <iframe src="https://lottie.host/embed/bb2ecf58-36db-4ff7-a44c-3e9bc1cfef77/3JlaYj1gAL.lottie"></iframe>
+          {!isMobile && <motion.div 
+            className="w-full max-w-[500px]"
+            animate="float"
+            variants={floatAnimation}
+          >
+            <iframe 
+              src="https://lottie.host/embed/bb2ecf58-36db-4ff7-a44c-3e9bc1cfef77/3JlaYj1gAL.lottie"
+              className="w-full h-auto aspect-square rounded-lg md:rounded-xl shadow-md md:shadow-xl"
+            />
+          </motion.div>}
         </motion.div>
 
       </div>
