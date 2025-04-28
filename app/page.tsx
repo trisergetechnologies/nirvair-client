@@ -8,6 +8,7 @@ import People from './components/People/index';
 
 export default function Home() {
 
+
   return (
     <div>
         <Banner />
@@ -16,7 +17,6 @@ export default function Home() {
         <Business />
         <Payment />
         <Logistic />
-
     </div>
   );
 }
