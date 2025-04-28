@@ -46,7 +46,7 @@ const Business = () => {
           <motion.h2 
             variants={slideInVariants}
             transition={{ duration: 0.6 }}
-            className='text-midnightblue text-4xl sm:text-5xl font-semibold text-center lg:text-start lh-143'
+            className='text-midnightblue text-4xl sm:text-5xl font-bold text-center lg:text-start lh-143'
           >
             Warum wir die richtige Wahl für Sie sind
           </motion.h2>

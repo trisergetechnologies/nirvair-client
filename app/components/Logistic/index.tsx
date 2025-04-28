@@ -47,16 +47,16 @@ const LogisticsSolution = () => {
           className="col-span-6 flex flex-col justify-center"
           variants={slideInVariants}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            <span className="text-blue-600">Warehouse Woes?</span> We've Got Your Back!
+          <h2 className="text-4xl sm:text-5xl font-bold text-midnightblue mb-6">
+            <span className="text-blue-600">Probleme im Lager?</span> Wir sind für Sie da!
           </h2>
           
           <div className="space-y-3 ">
             {[
-              "Losing track of inventory across multiple locations?",
-              "Wasting hours on manual data entry and reporting?",
-              "Struggling with inefficient picking routes?",
-              "Need real-time visibility but don't know where to start?"
+              "Verlieren Sie den Überblick über Ihren Lagerbestand an mehreren Standorten?",
+              "Verschwenden Sie Stunden mit manueller Dateneingabe und Berichterstattung?",
+              "Kämpfen Sie mit ineffizienten Kommissionierwegen?",
+              "Brauchen Sie Echtzeit-Transparenz, wissen aber nicht, wo Sie anfangen sollen?"
             ].map((text, i) => (
               <motion.div 
                 key={i}
@@ -125,9 +125,9 @@ const LogisticsSolution = () => {
         >
           <motion.h2 
             variants={slideInVariants}
-            className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl sm:text-5xl font-bold text-midnightblue mb-6"
           >
-            <span className="text-blue-600">Smart Logistics</span> - Your Warehouse Revolution
+            <span className="text-midnightblue">Smarte Logistik</span> - Revolutionieren Sie Ihr Lager!
           </motion.h2>
 
           <motion.p 

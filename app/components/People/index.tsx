@@ -50,7 +50,7 @@ const People = () => {
           >
             <motion.h1 
               variants={slideInVariants}
-              className='text-midnightblue text-4xl sm:text-5xl font-semibold text-center lg:text-start lh-143'
+              className='text-midnightblue text-4xl sm:text-5xl font-bold text-center lg:text-start lh-143'
             >
               Technologie vereinfachen, Wirkung für die Welt verstärken.
             </motion.h1>

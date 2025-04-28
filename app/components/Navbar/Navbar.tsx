@@ -29,19 +29,20 @@ const Navbar = () => {
     return (
         <Disclosure as="nav" className="navbar">
             <>
-                <div className="mx-auto max-w-7xl px-6 md:py-4 lg:px-8">
+                <div className="mx-auto max-w-7xl px-6 md:py-2 lg:px-8">
                     <div className="relative flex h-20 items-center justify-between">
-                        <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
+                    <h1 className='text-2xl/7 font-bold text-gray-900 sm:truncate sm:text-4xl sm:tracking-tight'>
+                                  <Link href="/" className="hover:text-gray-700 transition-colors">
+                                    nirvair
+                                  </Link>
+                            </h1>
+                        <div className="flex flex-1 items-end sm:items-stretch sm:justify-end">
 
                             {/* LOGO */}
 
                             <div className="flex flex-shrink-0 items-center">
 
-                            <h1 className='text-2xl/7 font-bold text-gray-900 sm:truncate sm:text-4xl sm:tracking-tight'>
-                                  <Link href="/" className="hover:text-gray-700 transition-colors">
-                                    nirvair
-                                  </Link>
-                            </h1>
+
                                 {/* 
                                 <img
                                     className="block h-12 w-40 lg:hidden"

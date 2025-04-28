@@ -78,7 +78,7 @@ const Payment = () => {
         >
           <motion.h2 
             variants={slideInVariants}
-            className='text-midnightblue text-4xl sm:text-5xl font-semibold text-center lg:text-start lh-143'
+            className='text-midnightblue text-4xl sm:text-5xl font-bold text-center lg:text-start lh-143'
           >
             Ihre Vision, Unsere Technologie, Gemeinsamer Erfolg
           </motion.h2>
