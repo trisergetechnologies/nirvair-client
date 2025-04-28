@@ -5,10 +5,10 @@ import { useState } from 'react';
 export default function ContactForm() {
   const [visibleFields, setVisibleFields] = useState({
     name: true,
-    email: false,
-    phone: false,
-    queryType: false,
-    message: false
+    email: true,
+    phone: true,
+    queryType: true,
+    message: true
   });
   
   const [formData, setFormData] = useState({

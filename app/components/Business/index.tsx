@@ -56,7 +56,7 @@ const Business = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className='text-black text-lg font-normal text-center lg:text-start lh-173 opacity-75 pt-3'
           >
-            Im Mittelpunkt unseres Handelns stehen Qualität, Sorgfalt und Vertrauen...
+            Uns zu wählen bedeutet, mit einem Team zusammenzuarbeiten, das Ihre technologischen Herausforderungen in Chancen verwandelt. Wir liefern präzise entwickelte Lösungen, unübertroffenen Support und messbare Ergebnisse – denn Ihr Erfolg ist unser höchster Maßstab.
           </motion.h3>
 
           <motion.button
@@ -85,7 +85,7 @@ const Business = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-        <iframe src="https://lottie.host/embed/4d88f81c-2f3b-448e-8c60-5f83a0dc2d97/C8UlgJ6U11.lottie"></iframe>
+        <iframe src="https://lottie.host/embed/bb2ecf58-36db-4ff7-a44c-3e9bc1cfef77/3JlaYj1gAL.lottie"></iframe>
         </motion.div>
 
       </div>

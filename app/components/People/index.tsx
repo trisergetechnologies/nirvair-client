@@ -37,7 +37,7 @@ const People = () => {
               alt="about us" 
               width={1000} 
               height={805} 
-              className='rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300'
+              className='rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300'
             />
           </motion.div>
 

@@ -32,8 +32,8 @@ const Payment = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
+    <div className="mx-auto max-w-7xl pt-20 sm:pb-20 px-6">
+      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
 
         {/* Image Section */}
         <motion.div 
@@ -48,13 +48,14 @@ const Payment = () => {
             variants={floatImage}
             animate="float"
             whileHover={{ scale: 1.02 }}
+            style={{ lineHeight: 0 }}
           >
             <Image 
-              src="/assets/payment/nirvair.vision.png" 
+              src="/assets/payment/nirvair-vision.jpg" 
               alt="payment" 
               width={600} 
-              height={600}
-              className="object-cover transform group-hover:scale-105 transition-transform"
+              height={500}
+              className="object-cover w-full h-auto"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-electricblue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           </motion.div>
@@ -87,7 +88,7 @@ const Payment = () => {
             className='text-black text-lg font-normal text-center lg:text-start lh-173 opacity-75 pt-3'
             transition={{ delay: 0.2 }}
           >
-            Bei uns stehen Ihre Ziele im Mittelpunkt. Mit maßgeschneiderten Technologielösungen...
+            Bei uns stehen Ihre Ziele im Mittelpunkt. Mit maßgeschneiderten Technologielösungen entwickeln wir individuelle Strategien für Ihren Erfolg. Von der Beratung bis zur Umsetzung begleiten wir Sie mit Expertise und Innovation – für messbare Ergebnisse.
           </motion.h3>
 
           <motion.div

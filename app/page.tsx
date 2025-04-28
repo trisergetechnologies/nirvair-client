@@ -5,6 +5,7 @@ import Business from './components/Business/index';
 import Features from './components/Features/index';
 import Payment from './components/Payment/index';
 import People from './components/People/index';
+import Logistic from './components/Logistic/index';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -40,6 +41,7 @@ export default function Home() {
         <Features />
         <Business />
         <Payment />
+        <Logistic />
       {/* </main> */}
     </div>
   );
