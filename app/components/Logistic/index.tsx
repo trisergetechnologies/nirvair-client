@@ -93,7 +93,7 @@ const LogisticsSolution = () => {
 
       {/* Section 2: Solution Showcase */}
       <motion.div 
-        className="grid grid-cols-1 lg:grid-cols-12 gap-20"
+        className="grid grid-cols-1 lg:grid-cols-12 gap-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -137,51 +137,11 @@ const LogisticsSolution = () => {
             Transformieren Sie Ihr Lager mit der KI-gesteuerten SmartLogiX-Lösung. Echtzeit-Tracking, automatisierte Workflows und Predictive Analytics optimieren Bestände, senken Kosten und steigern Effizienz. Zukunftssichere Logistik – intelligenter, schneller, nahtlos.
           </motion.p>
 
-          {/* <div className="space-y-6">
-            {[
-              { 
-                title: "Real-Time Inventory", 
-                desc: "Track every SKU across all locations with 99.9% accuracy",
-                icon: "📊"
-              },
-              { 
-                title: "AI Optimization", 
-                desc: "Reduce picking time by 40% with smart route algorithms",
-                icon: "🤖"
-              },
-              { 
-                title: "Seamless Integration", 
-                desc: "Works with your existing ERP and shipping systems",
-                icon: "🔄"
-              }
-            ].map((feature, i) => (
-              <motion.div 
-                key={i}
-                className="flex gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all"
-                variants={slideInVariants}
-                whileHover={{ y: -5 }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <div className="text-3xl">{feature.icon}</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div> */}
-
           <motion.div
             whileHover="hover"
             className="mt-8"
             variants={slideInVariants}
           >
-            {/* <button className="px-8 py-3 bg-blue-600 text-black rounded-lg flex items-center gap-2 group">
-              <span>Request Demo</span>
-              <motion.div variants={hoverArrow}>
-                <ArrowRightIcon className="h-5 w-5" />
-              </motion.div>
-            </button> */}
           </motion.div>
         </motion.div>
       </motion.div>
