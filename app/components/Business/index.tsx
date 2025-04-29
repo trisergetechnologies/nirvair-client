@@ -117,7 +117,7 @@ const Business = () => {
           {!isMobile && <motion.div 
             className="w-full max-w-[500px]"
             animate="float"
-            variants={floatAnimation}
+            variants={floatAnimation as any}
           >
             <iframe 
               src="https://lottie.host/embed/bb2ecf58-36db-4ff7-a44c-3e9bc1cfef77/3JlaYj1gAL.lottie"

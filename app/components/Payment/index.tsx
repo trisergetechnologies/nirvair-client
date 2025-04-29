@@ -68,7 +68,7 @@ const Payment = () => {
           <motion.div 
             className="relative rounded-xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-2xl"
             animate="float"
-            variants={floatImage}
+            variants={floatImage as any}
             whileHover={!isMobile ? { scale: 1.02 } : {}}
           >
             <Image 

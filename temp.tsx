@@ -69,7 +69,7 @@ const Banner = () => {
               <a href='#contactSection'>
                 <motion.button 
                   className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-electricblue hover:text-white hover:bg-blue"
-                  variants={buttonVariants}
+                  variants={buttonVariants as any}
                   whileHover="hover"
                   whileTap="tap"
                 >

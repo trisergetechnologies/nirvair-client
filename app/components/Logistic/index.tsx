@@ -110,7 +110,7 @@ const LogisticsSolution = () => {
           <motion.div 
             className="relative rounded-xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-2xl"
             animate="float"
-            variants={floatAnimation}
+            variants={floatAnimation as any}
           >
             <Image 
               src="/assets/logistics/logistic.jpg" 

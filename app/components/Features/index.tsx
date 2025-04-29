@@ -124,7 +124,7 @@ const Features = () => {
               <motion.div
                 className="mb-2"
                 animate="float"
-                variants={floatAnimation}
+                variants={floatAnimation as any}
               >
                 {item.icon}
               </motion.div>
